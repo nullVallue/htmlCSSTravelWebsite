@@ -1,4 +1,4 @@
-# htmlCSSTravelWebsite
+# Simple HTML CSS Javascript Mock Travel Website
 A pure HTML, CSS and Javascript mock landing page
 
 # Home Page
