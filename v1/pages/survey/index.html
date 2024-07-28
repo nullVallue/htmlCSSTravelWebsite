@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <title>Survey</title>
+
+
+</head>
+
+<body onload="resetPage()">
+
+
+
+
+    <nav class="navbar">
+        <!-- <nav class="navbar primary-bg"> -->
+        <h1 class="navbar-logo">
+            <a href="../home/index.html" class="white">
+                Airbnb
+            </a>
+        </h1>
+        <ul>
+            <li><a class="white" href="../background/index.html">Background</a></li>
+            <li><a class="white" href="../researchObj/index.html">Research Objectives</a></li>
+            <li><a class="active" href="#">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <div class="survey-content">
+        <div class="survey-blur">
+            <div class="form-container white-bg" id="formContainerId">
+
+                <form onsubmit="return handleSubmit()">
+                    <div>
+                        <h1 class="registration-title black fw-7">
+                            Registration Form
+                        </h1>
+                        <h2 class="registration-subtitle black fw-4">
+                            Kindly fill in all your information in the form below
+                        </h2>
+                    </div>
+
+                    <div class="row py-1">
+                        <div class="input-container rs-6">
+                            <label for="firstname">First Name</label>
+                            <input id="firstname" type="text" />
+                            <span id="firstNameErr" class="red err-msg" hidden hidden>* Please enter first name</span>
+                        </div>
+
+                        <div class="input-container rs-6">
+                            <label for="lastname">Last Name</label>
+                            <input id="lastname" type="text" />
+                            <span id="lastNameErr" class="red err-msg" hidden>* Please enter last name</span>
+                        </div>
+                    </div>
+
+
+                    <div class="row py-1">
+                        <div class="input-container rs-6">
+                            <label for="mobileno">Mobile No.</label>
+                            <input id="mobileno" type="text" />
+                            <span id="mobileNoErr" class="red err-msg" hidden>* Please enter mobile number</span>
+                        </div>
+
+                        <div class="input-container rs-6">
+                            <label class="black fw-5 text-md mb-0-5">Gender</label>
+                            <div class="radio-container col gap-1">
+                                <div class="row gap-2">
+                                    <label for="male">
+                                        <input id="male" type="radio" name="gender" value="male" />
+                                        <div class="custom-radio"></div>
+                                    </label>
+                                    <label for="male">
+                                        <span>Male</span>
+                                    </label>
+                                </div>
+
+                                <div class="row gap-2">
+                                    <label for="female">
+                                        <input id="female" type="radio" name="gender" value="female" />
+                                        <div class="custom-radio"></div>
+                                    </label>
+                                    <label for="female">
+                                        <span>Female</span>
+                                    </label>
+                                </div>
+                                <span id="genderErr" style="text-wrap: nowrap;" class="red err-msg" hidden>* Please
+                                    select gender</span>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="row py-1">
+                        <div class="input-container rs-6">
+                            <label for="address">Address</label>
+                            <input id="address" type="text" />
+                            <span id="addressErr" class="red err-msg" hidden>* Please enter address</span>
+                        </div>
+
+                        <div class="input-container rs-6">
+                            <label for="state">State</label>
+                            <select id="state" name="state" class="white-bg" id="dropdown">
+                                <option value="" selected disabled>Select a state</option>
+                                <option value="johor">Johor</option>
+                                <option value="kedah">Kedah</option>
+                                <option value="kelantan">Kelantan</option>
+                                <option value="melaka">Melaka</option>
+                                <option value="negeriSembilan">Negeri Sembilan</option>
+                                <option value="pahang">Pahang</option>
+                                <option value="perak">Perak</option>
+                                <option value="perlis">Perlis</option>
+                                <option value="pulauPinang">Pulau Pinang</option>
+                                <option value="sabah">Sabah</option>
+                                <option value="sarawak">Sarawak</option>
+                                <option value="selangor">Selangor</option>
+                                <option value="terengganu">Terengganu</option>
+                                <option value="kualaLumpur">Kuala Lumpur</option>
+                            </select>
+                            <span id="stateErr" class="red err-msg" hidden>* Please select state</span>
+                        </div>
+                    </div>
+
+                    <div class="row py-1">
+                        <div class="input-container rs-12">
+                            <label for="marital">Marital Status</label>
+                            <select id="marital" name="marital" class="white-bg" id="dropdown">
+                                <option value="" selected disabled>Select a status</option>
+                                <option value="married">Married</option>
+                                <option value="single">Single</option>
+                            </select>
+                            <span id="maritalErr" class="red err-msg" hidden>* Please select marital status</span>
+                        </div>
+                    </div>
+
+                    <div class="row py-1">
+
+                        <div class="input-container rs-4 gap-1">
+                            <label class="black fw-5 text-md">
+                                Where do you like <br>
+                                to go for vacation
+                            </label>
+                            <div class="checkbox-container">
+                                <label for="japan">
+                                    <input type="checkbox" id="japan" name="japan" class="locationCbGroup"
+                                        value="japan">
+                                    <div class="checkmark"></div>
+                                </label>
+                                <label for="japan">
+                                    <span>Japan</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-container">
+                                <label for="korea">
+                                    <input type="checkbox" id="korea" name="korea" class="locationCbGroup"
+                                        value="korea">
+                                    <div class="checkmark"></div>
+                                </label>
+                                <label for="korea">
+                                    <span>Korea</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-container">
+                                <label for="uk">
+                                    <input type="checkbox" id="uk" name="uk" class="locationCbGroup" value="uk">
+                                    <div class="checkmark"></div>
+                                </label>
+                                <label for="uk">
+                                    <span>UK</span>
+                                </label>
+                            </div>
+
+
+                            <div class="checkbox-container">
+                                <label for="switzerland">
+                                    <input type="checkbox" id="switzerland" name="switzerland" class="locationCbGroup"
+                                        value="switzerland">
+                                    <div class="checkmark"></div>
+                                </label>
+                                <label for="switzerland">
+                                    <span>Switzerland</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-container">
+                                <label for="singapore">
+                                    <input type="checkbox" id="singapore" name="singapore" class="locationCbGroup"
+                                        value="singapore">
+                                    <div class="checkmark"></div>
+                                </label>
+                                <label for="singapore">
+                                    <span>Singapore</span>
+                                </label>
+                            </div>
+                            <span id="locationErr" style="text-wrap: nowrap;" class="red err-msg" hidden>* Please select
+                                at least one location</span>
+
+
+                        </div>
+
+
+                        <div class="input-container rs-4 gap-1">
+                            <label class="black fw-5 text-md">
+                                What type of transportation
+                                <br>do you prefer?
+                            </label>
+                            <div class="checkbox-container">
+                                <label for="cruise">
+                                    <input type="checkbox" id="cruise" name="cruise" class="transportCbGroup"
+                                        value="cruise">
+                                    <div class="checkmark"></div>
+                                </label>
+                                <label for="cruise">
+                                    <span>Cruise</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-container">
+                                <label for="flight">
+                                    <input type="checkbox" id="flight" name="flight" class="transportCbGroup"
+                                        value="flight">
+                                    <div class="checkmark"></div>
+                                </label>
+                                <label for="flight">
+                                    <span>Flight</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-container">
+                                <label for="bus">
+                                    <input type="checkbox" id="bus" name="bus" class="transportCbGroup" value="bus">
+                                    <div class="checkmark"></div>
+                                </label>
+                                <label for="bus">
+                                    <span>Bus</span>
+                                </label>
+                            </div>
+
+
+                            <div class="checkbox-container">
+                                <label for="car">
+                                    <input type="checkbox" id="car" name="car" class="transportCbGroup" value="car">
+                                    <div class="checkmark"></div>
+                                </label>
+                                <label for="car">
+                                    <span>Car</span>
+                                </label>
+                            </div>
+
+                            <span id="transportErr" style="text-wrap: nowrap;" class="red err-msg" hidden>* Please
+                                select at least one transportation</span>
+
+                        </div>
+
+
+
+                        <div class="rs-4">
+                            <label class="black fw-5 text-md">
+                                Activity that you like to do
+                            </label>
+                            <div class="radio-container col gap-1">
+                                <div class="row gap-2">
+                                    <label for="sightseeing">
+                                        <input id="sightseeing" type="radio" name="activity" value="sightseeing" />
+                                        <div class="custom-radio"></div>
+                                    </label>
+                                    <label for="sightseeing">
+                                        <span>Sightseeing</span>
+                                    </label>
+                                </div>
+
+                                <div class="row gap-2">
+                                    <label for="shopping">
+                                        <input id="shopping" type="radio" name="activity" value="shopping" />
+                                        <div class="custom-radio"></div>
+                                    </label>
+                                    <label for="shopping">
+                                        <span>Shopping</span>
+                                    </label>
+                                </div>
+
+                                <div class="row gap-2">
+                                    <label for="islandHopping">
+                                        <input id="islandHopping" type="radio" name="activity" value="islandHopping" />
+                                        <div class="custom-radio"></div>
+                                    </label>
+                                    <label for="islandHopping">
+                                        <span>Island Hopping</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <span id="activityErr" style="text-wrap: nowrap;" class="red err-msg" hidden>* Please select
+                                activity</span>
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="row py-1">
+                    </div>
+
+
+                    <div class="row py-1 submit-row">
+                        <div>
+                            <!-- <button
+                                onclick="handleSubmit()"
+                                class="secondary text-sm fw-7 accent-bg text-decoration-none border-radius-md submit-btn"
+                            >
+                                Submit
+                            </button> -->
+                            <input type="submit"
+                                class="secondary text-sm fw-7 accent-bg text-decoration-none border-radius-md submit-btn"
+                                value="Submit">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="output-container white-bg" id="outputContainerId" hidden>
+                <div>
+                    <h1 class="registration-title black fw-7">
+                        Registration Form
+                    </h1>
+                    <h2 class="registration-subtitle black fw-4">
+                        Please review your info
+                    </h2>
+                </div>
+
+                <div class="row output-row" style="padding-top: 2rem;">
+                    <div class="input-container rs-6">
+                        <label style="font-weight: 800;">Name</label>
+                        <span id="nameSpan">name</span>
+                    </div>
+
+                    <div class="input-container rs-6">
+                        <label style="font-weight: 800;">Mobile No</label>
+                        <span id="mobileNoSpan">01010101</span>
+                    </div>
+                </div>
+
+                <div class="row output-row">
+                    <div class="input-container rs-6">
+                        <label style="font-weight: 800;">Gender</label>
+                        <span id="genderSpan">male</span>
+                    </div>
+
+                    <div class="input-container rs-6">
+                        <label style="font-weight: 800;">Marital Status</label>
+                        <span id="maritalSpan">single</span>
+                    </div>
+
+                </div>
+
+
+                <div class="row output-row">
+                    <div class="input-container rs-6">
+                        <label style="font-weight: 800;">Address</label>
+                        <span id="addressSpan">1234</span>
+                    </div>
+
+                    <div class="input-container rs-6">
+                        <label style="font-weight: 800;">State</label>
+                        <span id="stateSpan">ppinang</span>
+                    </div>
+                </div>
+
+
+                <div class="row output-row">
+                    <div class="input-container rs-12">
+                        <label style="font-weight: 800;">Vacation Locations</label>
+                        <span id="locationSpan">japan, korea</span>
+                    </div>
+                </div>
+
+                <div class="row output-row">
+                    <div class="input-container rs-12">
+                        <label style="font-weight: 800;">Prefererd Transportation</label>
+                        <span id="transportSpan">car, cruise</span>
+                    </div>
+                </div>
+
+                <div class="row output-row">
+                    <div class="input-container rs-12">
+                        <label style="font-weight: 800;">Prefererd Activty</label>
+                        <span id="activitySpan">Sight seeing</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <footer class="secondary-bg">
+        <p class="copyright-paragraph">&copy; 2024 Airbnb . All rights reserved.</p>
+        <div class="footerIconsContainer">
+            <div class="footerSvg">
+                <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                        fill="#FFF" />
+                    <path
+                        d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                        fill="#FFF" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                        fill="#FFF" />
+                </svg>
+                 <!-- replace # with link -->
+                <a class="svgLabel white text-decoration-none" href="#">Instagram</a>
+            </div>
+
+            <div class="footerSvg">
+                <svg width="1rem" height="1rem" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -7399.000000)" fill="#FFF">
+                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                <path
+                                    d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"
+                                    id="facebook-[#176]">
+
+                                </path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+
+                 <!-- replace # with link -->
+                <a class="svgLabel white text-decoration-none" href="#">Facebook</a>
+            </div>
+
+
+        </div>
+    </footer>
+
+
+    <script>
+        function handleSubmit() {
+            const f = (id) => {
+                return document.getElementById(id).value;
+            }
+
+            const v = (id) => {
+                return document.getElementById(id);
+            }
+
+            const c = (className) => {
+                return document.getElementsByClassName(className);
+            }
+
+            const parseState = (input) => {
+                let result = input.charAt(0).toUpperCase() + input.slice(1);
+                result = result.replace(/([A-Z])/g, ' $1');
+                return result.trim();
+            }
+
+            const capitalizeFirstChar = (str) => {
+                return str.replace(/\b\w/g, function(char) {
+                    return char.toUpperCase();
+                });
+            }
+
+
+            v("nameSpan").innerText = "";
+            v("mobileNoSpan").innerText = "";
+            v("genderSpan").innerText = "";
+            v("maritalSpan").innerText = "";
+            v("addressSpan").innerText = "";
+            v("stateSpan").innerText = "";
+            v("locationSpan").innerText = "";
+            v("transportSpan").innerText = "";
+            v("activitySpan").innerText = "";
+
+
+
+
+            let firstName = f("firstname");
+            let lastName = f("lastname");
+            let mobileNo = f("mobileno");
+            let gender = null;
+            try {
+                gender = document.querySelector("input[name='gender']:checked").value;
+            }
+            catch (e) {
+                gender = null;
+            }
+            let address = f("address");
+            let state = f("state");
+            let marital = f("marital");
+
+            let location = c("locationCbGroup");
+            let transport = c("transportCbGroup");
+            let activity = null;
+
+            try {
+                activity = document.querySelector("input[name='activity']:checked").value;
+            }
+            catch (e) {
+                activity = null;
+            }
+
+            let filterLocation = [];
+            for (let i = 0; i < location.length; i++) {
+                if (location[i].checked) {
+                    filterLocation.push(location[i].value);
+                }
+            }
+
+            let filterTransport = [];
+            for (let i = 0; i < transport.length; i++) {
+                if (transport[i].checked) {
+                    filterTransport.push(transport[i].value);
+                }
+            }
+
+
+            // validation
+            let error = false;
+            if (!firstName || firstName == "") {
+                error = true;
+                v("firstNameErr").hidden = false;
+            }
+            else {
+                v("firstNameErr").hidden = true;
+            }
+
+            if (!lastName || lastName == "") {
+                error = true;
+                v("lastNameErr").hidden = false;
+            }
+            else {
+                v("lastNameErr").hidden = true;
+            }
+
+            if (!mobileNo || mobileNo == "") {
+                error = true;
+                v("mobileNoErr").hidden = false;
+            }
+            else {
+                v("mobileNoErr").hidden = true;
+            }
+
+            if (!gender) {
+                error = true;
+                v("genderErr").hidden = false;
+            }
+            else {
+                v("genderErr").hidden = true;
+            }
+
+            if (!address || address == "") {
+                error = true;
+                v("addressErr").hidden = false;
+            }
+            else {
+                v("addressErr").hidden = true;
+            }
+
+            if (!state || state == "") {
+                error = true;
+                v("stateErr").hidden = false;
+            }
+            else {
+                v("stateErr").hidden = true;
+            }
+
+            if (!marital || marital == "") {
+                error = true;
+                v("maritalErr").hidden = false;
+            }
+            else {
+                v("maritalErr").hidden = true;
+            }
+
+            if (!filterLocation || filterLocation.length < 1) {
+                error = true;
+                v("locationErr").hidden = false;
+            }
+            else {
+                v("locationErr").hidden = true;
+            }
+
+            if (!filterTransport || filterTransport.length < 1) {
+                error = true;
+                v("transportErr").hidden = false;
+            }
+            else {
+                v("transportErr").hidden = true;
+            }
+
+            if (!activity) {
+                error = true;
+                v("activityErr").hidden = false;
+            }
+            else {
+                v("activityErr").hidden = true;
+            }
+
+            // return false if invalid dataerror
+            if (error) {
+                return false;
+            }
+
+            let locationStr = ""
+            for(let i = 0; i < filterLocation.length; i++){
+                if(i == 0){
+                    locationStr += capitalizeFirstChar(filterLocation[i]);
+                }
+                else{
+                    locationStr += ", " + capitalizeFirstChar(filterLocation[i]);
+                }
+            }
+
+            let transportStr= ""
+            for(let i = 0; i < filterTransport.length; i++){
+                if(i == 0){
+                    transportStr += capitalizeFirstChar(filterTransport[i]);
+                }
+                else{
+                    transportStr  += ", " + capitalizeFirstChar(filterTransport[i]);
+                }
+            }
+
+
+            v("nameSpan").innerText= firstName + " " + lastName;
+            v("mobileNoSpan").innerText= mobileNo;
+            v("genderSpan").innerText= gender;
+            v("maritalSpan").innerText= capitalizeFirstChar(marital) ;
+            v("addressSpan").innerText= address;
+            v("stateSpan").innerText= parseState(state);
+            v("locationSpan").innerText= locationStr;
+            v("transportSpan").innerText= transportStr;
+            v("activitySpan").innerText= parseState(activity);
+
+            v("formContainerId").hidden = true;
+            v("outputContainerId").hidden = false;
+
+
+            return false;
+        }
+
+        function resetPage(){
+
+            const v = (id) => {
+                return document.getElementById(id);
+            }
+
+            v("formContainerId").hidden = false;
+            v("outputContainerId").hidden = true;
+
+
+            v("nameSpan").innerText = "";
+            v("mobileNoSpan").innerText = "";
+            v("genderSpan").innerText = "";
+            v("maritalSpan").innerText = "";
+            v("addressSpan").innerText = "";
+            v("stateSpan").innerText = "";
+            v("locationSpan").innerText = "";
+            v("transportSpan").innerText = "";
+            v("activitySpan").innerText = "";
+
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
